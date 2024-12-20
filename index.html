@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site avec Texte Caché</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js" defer></script> <!-- Lien vers le JS -->
+</head>
+<body>
+    <!-- Conteneur principal -->
+    <div id="main-container">
+        <!-- Canvas pour les ellipses -->
+        <div id="canvas-container"></div> <!-- p5.js ajoutera le canvas ici -->
+
+        <!-- Texte placé en dessous -->
+        <div id="text-container">
+            <!-- Page 1 -->
+            <div class="page" id="page1">
+                <h1>La place du numérique dans l’Arte Povera : Une métamorphose temporelle et matérielle</h1>
+                <h2>1. Une première rencontre avec l’Arte Povera : l’éloge de la simplicité</h2>
+                <p class="hidden-text">Découvrir l’Arte Povera pour la première fois, c’est se retrouver face à un art qui surprend par sa simplicité et son rapport direct à la matière. Ce mouvement artistique italien des années 1960 rompt avec les codes traditionnels en valorisant des matériaux pauvres, bruts, et souvent issus de la nature : pierres, bois, tissus, cordes, terre ou encore métaux rouillés. Ces objets, que l’on pourrait croire dénués de valeur artistique, prennent vie grâce à la manière dont ils sont mis en scène par les artistes. L’objectif est de revenir à l’essentiel, à une forme d’authenticité où la beauté réside dans l’imperfection et dans la transformation naturelle des éléments.  
+                    Face à ces œuvres, le spectateur ressent une forme de temporalité organique. Les matériaux évoluent, se dégradent ou se transforment avec le temps. Une sculpture en métal rouille lentement, une branche se courbe sous son propre poids, une pierre semble marquer une permanence millénaire. Ce rapport au temps, simple et tangible, contraste avec notre quotidien, souvent marqué par la rapidité et l’artificialité. Ce qui frappe surtout dans cette première rencontre, c’est le silence de ces matériaux et leur capacité à nous reconnecter à des sensations oubliées.  
+                    
+                </p>
+                <div class="arrow" onclick="goToNextPage(2)">➤</div>
+            </div>
+            <!-- Page 2 -->
+            <div class="page" id="page2">
+                <h2>2. Le numérique comme nouvel espace de création : entre matière et immatérialité</h2>
+                <p class="hidden-text">L’ère numérique a profondément bouleversé notre manière d’appréhender le monde et, par conséquent, l’art. Face aux œuvres d’Arte Povera, qui valorisent l’expérience tactile et sensorielle, le numérique semble, à première vue, être son contraire. En transformant la matière physique en données et en images, il privilégie l’immatérialité et les flux invisibles. Pourtant, cette technologie offre de nouvelles possibilités pour prolonger les réflexions initiées par les artistes de l’Arte Povera.  
+                    Si une sculpture faite de bois ou de métal semble ancrée dans une présence matérielle immédiate, le numérique permet d’en simuler les textures, les transformations et même les temporalités. Une installation numérique peut reproduire la lente dégradation d’un objet naturel à travers des algorithmes qui accélèrent ou ralentissent le processus à volonté. L’écran devient alors un seuil, une fenêtre sur un univers hybride où le tangible et le virtuel se croisent. Ce nouvel espace pose des questions essentielles : comment ressentir la matière quand elle est réduite à des pixels ? Peut-on encore expérimenter l’éphémère lorsque tout semble contrôlé par des boucles numériques infinies ? Ces interrogations font du numérique un outil capable de renouveler les réflexions portées par l’Arte Povera.  
+                    </p>
+                <div class="arrow" onclick="goToNextPage(3)">➤</div>
+            </div>
+            <!-- Page 3 -->
+            <div class="page" id="page3">
+                <h2>3. Le temps transformé : des cycles naturels aux boucles numériques</h2>
+                <p class="hidden-text">L’une des idées fondatrices de l’Arte Povera est son rapport au temps. Dans une œuvre où la rouille recouvre progressivement un morceau de fer, ou où une plante pousse lentement, le temps devient partie intégrante de l’œuvre. Il s’agit d’un temps naturel, cyclique, que l’artiste laisse agir sans contrôle. Ce temps brut et authentique résonne avec notre propre perception de la durée : celle d’un monde qui change lentement, marqué par des rythmes organiques.  
+                    Le numérique, lui, propose une autre vision de la temporalité. Grâce aux technologies, le temps peut être manipulé, accéléré, ralenti ou fragmenté à l’infini. Les œuvres interactives inspirées de l’Arte Povera jouent avec cette nouvelle temporalité. Une sculpture virtuelle pourrait rouiller en quelques secondes ou se reconstruire instantanément, donnant une illusion d’éternité ou d’éphémère contrôlé. Contrairement au hasard qui règne dans les cycles naturels, le temps numérique est souvent programmé, réglé par des algorithmes. Cette différence ouvre un dialogue entre deux perceptions du temps : le temps incontrôlable de la nature et le temps artificiel, malléable du numérique.  
+                    En tant que spectateur, nous nous retrouvons face à une expérience troublante. D’un côté, l’art nous rappelle la lenteur et l’imprévisibilité du monde naturel. De l’autre, il nous plonge dans une temporalité fluide, où les changements s’opèrent à la vitesse de la lumière. Ce dialogue invite à réfléchir sur notre rapport au temps dans une société où tout s’accélère sans cesse.  
+                    </p>
+                <div class="arrow" onclick="goToNextPage(4)">➤</div>
+            </div>
+            <!-- Page 4 -->
+            <div class="page" id="page4">
+                <h2>4. Le spectateur comme acteur : une expérience immersive et interactive</h2>
+                <p class="hidden-text">Dans l’Arte Povera, l’interaction avec l’œuvre joue un rôle central. L’artiste ne propose pas seulement un objet à contempler, mais une expérience à vivre. Le spectateur peut parfois toucher, ressentir ou même contribuer à la transformation de l’œuvre. Ce rapport direct à la matière donne à chacun la possibilité de participer activement à l’œuvre d’art, de devenir un élément de son évolution.  
+                    Avec l’arrivée des technologies numériques, cette interaction prend une nouvelle dimension. Le spectateur n’est plus seulement un visiteur passif ; il devient un véritable acteur. Grâce aux installations interactives, à la réalité virtuelle ou aux capteurs de mouvement, il peut transformer l’œuvre par ses gestes ou sa présence. Une sculpture numérique peut réagir au moindre mouvement du spectateur, générant des formes et des couleurs en temps réel. Une installation immersive peut créer un environnement qui évolue selon les actions du public. L’expérience devient alors unique, personnelle et en perpétuelle transformation.  
+                    Ce rôle actif du spectateur prolonge l’héritage de l’Arte Povera en amplifiant sa dimension participative. Là où l’art traditionnel pouvait parfois imposer une distance entre l’œuvre et le public, le numérique abolit cette séparation pour placer le spectateur au cœur de la création. En interagissant directement avec l’œuvre, celui-ci devient un co-créateur, redéfinissant son rapport à l’art et au monde.                      
+                </p>
+                <div class="arrow" onclick="goToNextPage(5)">➤</div>
+            </div>
+            <!-- Page 5 -->
+            <div class="page" id="page5">
+                <h1>Conclusion</h1>
+                <h2>Une rencontre inattendue entre tradition et innovation</h2>
+                <p class="hidden-text">
+                    Découvrir l’Arte Povera, c’est prendre conscience de la richesse cachée dans la simplicité des matériaux bruts et dans leur rapport au temps. Ce mouvement nous ramène à une expérience sensorielle et naturelle du monde, souvent oubliée dans notre quotidien moderne. Le numérique, quant à lui, semble éloigné de ces préoccupations en favorisant l’immatérialité, l’interactivité et la manipulation du temps. Pourtant, ces deux approches dialoguent de manière surprenante. Le numérique ne remplace pas les fondements de l’Arte Povera ; il les prolonge en explorant de nouveaux horizons.  
+                    Ce dialogue entre matière et immatérialité, entre cycles naturels et temporalités programmées, offre une réflexion profonde sur notre rapport au monde. Face à un art hybride où les frontières entre réel et virtuel s’effacent, nous sommes invités à redéfinir notre manière de percevoir, d’interagir et de participer à l’expérience artistique. L’Arte Povera et le numérique nous rappellent ainsi que l’art est avant tout une invitation à être présents, à ressentir et à transformer ce qui nous entoure. Cette rencontre inattendue ouvre de nouvelles perspectives pour penser l’art et notre place dans un monde en constante métamorphose.
+                    </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

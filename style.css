@@ -1,0 +1,123 @@
+/* Styles de base */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f2f8f5;
+    overflow: hidden;
+}
+
+/* Conteneur principal */
+#main-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Canvas */
+canvas {
+    display: block; /* Assure que le canvas ne génère pas d'espacement supplémentaire */
+    position: relative;
+    z-index: 1; /* Place le canvas en arrière-plan */
+}
+
+/* Conteneur du texte (carré blanc) */
+.text-container {
+    width: 400px;
+    height: auto; /* Ajuste automatiquement à la hauteur du contenu */
+    margin-top: 20px; /* Espacement entre le canvas et le texte */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    z-index: 10; /* Texte au-dessus */
+}
+
+/* Flèche */
+.arrow {
+    bottom: 25px; /* Position de la flèche */
+    margin-top: 100px;
+    font-size: 35px;
+    left: 50%;
+    transform: translateX(-10%);
+    cursor: pointer;
+    color: #000001;
+    display: inline-block; /* Permet de gérer l'espacement */
+    z-index: 20;
+}
+
+/* Cacher le texte jusqu'à ce qu'il soit visible */
+.hidden-text {
+    display: block;
+    position: relative;
+    padding: 10px;
+    top: 30px;
+    text-align: justify; /* Justifie le texte */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    width: 70%; /* Définit une largeur pour le conteneur */
+}
+
+.page{
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: corner;
+    background-color: #f2f8f5;
+    padding: 350px;
+    box-sizing: border-box;
+}
+
+.page.active {
+    display: block; /* La page active sera visible */
+}
+
+canvas {
+    position: relative;
+    z-index: 9;
+}
+
+/* Afficher la page active */
+.page.active {
+    display: block;
+}
+
+h1, h2 {
+    font-family: 'Arial', sans-serif; /* Police de caractères */
+    font-weight: bold; /* Met en gras les titres */
+    text-transform: uppercase; /* Met les titres en majuscules */
+    margin: 1px; /* Espacement autour des titres */
+    text-align: justify; /* Centre les titres horizontalement */
+  }
+  
+  /* Style spécifique pour chaque niveau de titre */
+  h1 {
+    font-size: 25px; /* Taille de police pour h1 */
+    color: #000000; /* Couleur sombre bleutée */
+    text-decoration: underline; /* Souligne le titre */
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #000000; /* Couleur bleue */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+  }
+
+  .page-image {
+    display: block; /* Centre l'image */
+    margin: 20px auto; /* Espacement autour de l'image */
+    width: 60%; /* Ajuste la largeur à 60% du conteneur */
+    border: 2px solid #ddd; /* Bordure légère */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
